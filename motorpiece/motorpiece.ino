@@ -9,10 +9,12 @@ void setup() {
   pinMode(forwardPin, OUTPUT);
   pinMode(backwardPin, OUTPUT);
   pinMode(motorSpeedPin, OUTPUT);
+  Serial.begin(9600); 
 }
 
 void loop() {
   // Stop motor
+  Serial.println("sfod");
   digitalWrite(forwardPin, LOW);
   digitalWrite(backwardPin, LOW);
   analogWrite(motorSpeedPin, 0); // Stop motor completely
